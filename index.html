@@ -89,7 +89,8 @@
             <div class="flex flex-wrap justify-center sm:justify-start gap-6">
               <!-- ITEM -->
               <div
-                class="bg-white border-2 border-transparent hover:border-gray-500 duration-200 p-4 w-[300px] space-y-2 cursor-pointer rounded-lg product-card"
+                class="bg-white border-2 border-transparent hover:border-gray-500 duration-200 p-4 w-[300px] space-y-2 cursor-pointer rounded-lg"
+                onclick="handleCardClick(this)"
               >
                 <div
                   class="bg-[#f3f3f3] flex justify-center py-8 mb-4 rounded-lg"
@@ -140,7 +141,8 @@
               </div>
               <!-- ITEM -->
               <div
-                class="bg-white border-2 border-transparent hover:border-gray-500 duration-200 p-4 w-[300px] space-y-2 cursor-pointer rounded-lg product-card"
+                class="bg-white border-2 border-transparent hover:border-gray-500 duration-200 p-4 w-[300px] space-y-2 cursor-pointer rounded-lg"
+                onclick="handleCardClick(this)"
               >
                 <div
                   class="bg-[#f3f3f3] flex justify-center py-8 mb-4 rounded-lg"
@@ -191,7 +193,8 @@
               </div>
               <!-- ITEM -->
               <div
-                class="bg-white border-2 border-transparent hover:border-gray-500 duration-200 p-4 w-[300px] space-y-2 cursor-pointer rounded-lg product-card"
+                class="bg-white border-2 border-transparent hover:border-gray-500 duration-200 p-4 w-[300px] space-y-2 cursor-pointer rounded-lg"
+                onclick="handleCardClick(this)"
               >
                 <div
                   class="bg-[#f3f3f3] flex justify-center py-8 mb-4 rounded-lg"
@@ -265,11 +268,8 @@
             <div class="p-6 bg-white rounded-xl mt-6 space-y-3">
               <!-- SELECTED ITEMS CONTAINER -->
               <div>
-                <ol class="font-medium text-xl space-y-2">
-                  <!-- SELECTED ITEMS -->
-                  <li>1. Home Cooker</li>
-                  <li>2. Sports Cates</li>
-                  <li>3. Home Cooker</li>
+                <ol class="font-medium text-xl space-y-2" id="selected-items">
+                  <!-- SELECTED ITEMS GOES HERE-->
                 </ol>
               </div>
               <hr />
