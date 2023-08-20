@@ -49,6 +49,7 @@ function updateCart() {
   } else {
     grandTotal = totalPrice;
   }
+
   grandTotalDisplay.innerText = grandTotal.toFixed(2);
   discountDisplay.innerText = discount.toFixed(2);
 }
@@ -59,7 +60,7 @@ function checkButtons() {
   if (totalPrice > 0) {
     purchaseButton.removeAttribute("disabled");
   } else {
-    purchaseButton.setAttribute("disabled");
+    purchaseButton.setAttribute("disabled", "disabled");
   }
 
   if (totalPrice >= 200) {
@@ -70,6 +71,13 @@ function checkButtons() {
   // FOR COUPON BUTTON
 }
 
+function goHomeButton() {
+  cartArray.length = 0;
+  canApplyDiscount = false;
+  updateCart();
+  checkDiscount();
+}
+
 // ADDING CLICK FUNCTION TO PRODUCT CARDS
 function handleCardClick(target) {
   productName = target.childNodes[5].innerText;
@@ -78,7 +86,7 @@ function handleCardClick(target) {
   updateCart();
 }
 
-couponButton.addEventListener("click", function () {
+function checkDiscount() {
   if (couponInput.value === "SELL200") {
     canApplyDiscount = true;
     discountTag.classList.remove("invisible");
@@ -88,4 +96,4 @@ couponButton.addEventListener("click", function () {
   }
   couponInput.value = "";
   updateCart();
-});
+}
