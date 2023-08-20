@@ -564,92 +564,95 @@
             </div>
           </div>
           <!-- SIDEBAR -->
-          <div class="mt-[62px] flex-1 w-full">
-            <!-- COUPON -->
-            <div class="p-6 bg-white rounded-xl">
-              <h1 class="font-semibold text-2xl mb-4">Have Coupon?</h1>
-              <div class="join">
-                <input
-                  class="input input-bordered join-item rounded-l-xl w-full sm:w-fit"
-                  placeholder="Coupon Code"
-                  id="input-cpn"
-                />
-                <button
-                  class="btn join-item rounded-r-xl bg-color-prim text-white border-0 hover:bg-color-prim"
-                  id="btn-cpn"
-                  disabled
+          <div class="flex justify-center">
+            <div class="mt-[62px] w-fit">
+              <!-- COUPON -->
+              <div class="p-6 bg-white rounded-xl">
+                <h1 class="font-semibold text-2xl mb-4">Have Coupon?</h1>
+                <div class="flex justify-between">
+                  <input
+                    type="text"
+                    placeholder="Coupon Code"
+                    id="input-cpn"
+                    class="border-2 border-r-0 rounded-l-lg px-4 border-gray-200 focus:outline-none"
+                  />
+                  <button
+                    class="btn btn-primary rounded-none rounded-r-lg bg-color-prim text-white border-0 hover:bg-color-prim"
+                    id="btn-cpn"
+                    disabled
+                  >
+                    Apply
+                  </button>
+                </div>
+              </div>
+              <!-- SELECTED ITEMS -->
+              <div class="p-6 bg-white rounded-xl mt-6 space-y-3 relative">
+                <!-- DISCOUNT APPLIED INDICATOR -->
+                <div
+                  class="badge badge-primary absolute right-0 -top-2 bg-color-prim border-0 text-white invisible"
+                  id="discount-tag"
                 >
-                  Apply
-                </button>
-              </div>
-            </div>
-            <!-- SELECTED ITEMS -->
-            <div class="p-6 bg-white rounded-xl mt-6 space-y-3 relative">
-              <!-- DISCOUNT APPLIED INDICATOR -->
-              <div
-                class="badge badge-primary absolute right-0 -top-2 bg-color-prim border-0 text-white invisible"
-                id="discount-tag"
-              >
-                Discount Applied!
-              </div>
-              <!-- SELECTED ITEMS CONTAINER -->
-              <div>
-                <ol class="font-medium text-xl space-y-2" id="selected-items">
-                  <!-- SELECTED ITEMS GOES HERE-->
-                </ol>
-              </div>
-              <hr />
-              <div class="font-medium text-xl space-y-2">
-                <p>
-                  Total Price:
-                  <span class="text-color-gray"
-                    ><span id="total-price">0.00</span>TK</span
-                  >
-                </p>
-                <p>
-                  Discount:
-                  <span class="text-color-gray"
-                    ><span id="discount-amount">0.00</span>TK</span
-                  >
-                </p>
-                <p>
-                  Total:
-                  <span class="text-color-gray"
-                    ><span id="grand-total">0.00</span>TK</span
-                  >
-                </p>
-              </div>
-              <hr />
-              <div class="relative">
-                <!-- Open the modal using ID.showModal() method -->
-                <button
-                  class="btn btn-primary bg-color-prim text-white border-0 hover:bg-color-prim absolute -bottom-12 left-0 right-0"
-                  id="btn-purchase"
-                  disabled
-                  onclick="my_modal_2.showModal()"
-                >
-                  Make Purchase
-                </button>
-                <dialog id="my_modal_2" class="modal">
-                  <form
-                    method="dialog"
-                    class="modal-box flex flex-col items-center justify-center space-y-7 py-12"
-                  >
-                    <img src="images/congo.png" alt="" />
-                    <div class="space-y-2 text-center">
-                      <h1 class="font-bold text-5xl">Congratulations</h1>
-                      <p class="font-normal text-lg text-color-gray">
-                        You have purchased the products
-                      </p>
-                    </div>
-                    <button
-                      class="btn btn-primary bg-color-prim border-0 hover:bg-color-prim text-white"
-                      onClick="window.location.reload();"
+                  Discount Applied!
+                </div>
+                <!-- SELECTED ITEMS CONTAINER -->
+                <div>
+                  <ol class="font-medium text-xl space-y-2" id="selected-items">
+                    <!-- SELECTED ITEMS GOES HERE-->
+                  </ol>
+                </div>
+                <hr />
+                <div class="font-medium text-xl space-y-2">
+                  <p>
+                    Total Price:
+                    <span class="text-color-gray"
+                      ><span id="total-price">0.00</span>TK</span
                     >
-                      Go Home
-                    </button>
-                  </form>
-                </dialog>
+                  </p>
+                  <p>
+                    Discount:
+                    <span class="text-color-gray"
+                      ><span id="discount-amount">0.00</span>TK</span
+                    >
+                  </p>
+                  <p>
+                    Total:
+                    <span class="text-color-gray"
+                      ><span id="grand-total">0.00</span>TK</span
+                    >
+                  </p>
+                </div>
+                <hr />
+                <div class="relative">
+                  <!-- Open the modal using ID.showModal() method -->
+                  <button
+                    class="btn btn-primary bg-color-prim text-white border-0 hover:bg-color-prim absolute -bottom-12 left-0 right-0"
+                    id="btn-purchase"
+                    disabled
+                    onclick="my_modal_2.showModal()"
+                  >
+                    Make Purchase
+                  </button>
+                  <dialog id="my_modal_2" class="modal">
+                    <form
+                      method="dialog"
+                      class="modal-box flex flex-col items-center justify-center space-y-7 py-12"
+                    >
+                      <img src="images/congo.png" alt="" />
+                      <div class="space-y-2 text-center">
+                        <h1 class="font-bold text-5xl">Congratulations</h1>
+                        <p class="font-normal text-lg text-color-gray">
+                          You have purchased the products
+                        </p>
+                      </div>
+                      <button
+                        class="btn btn-primary bg-color-prim border-0 hover:bg-color-prim text-white"
+                        onClick="window.location.href=window.location.href;"
+                      >
+                        Go Home
+                      </button>
+                    </form>
+                  </dialog>
+                </div>
               </div>
             </div>
           </div>
